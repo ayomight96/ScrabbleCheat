@@ -14,6 +14,16 @@
         "psr-15"
     ],
     "homepage": "https://mezzio.dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/babarinde/doctrine-mongo-odm"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/babarinde/monolog-middleware"
+        }
+    ],
     "support": {
         "docs": "https://docs.mezzio.dev/mezzio/",
         "issues": "https://github.com/mezzio/mezzio-skeleton/issues",
@@ -53,14 +63,29 @@
         "mezzio/mezzio-helpers": "^5.7",
         "laminas/laminas-servicemanager": "^3.4",
         "mezzio/mezzio-fastroute": "^3.0.3",
-        "mezzio/mezzio-laminasviewrenderer": "^2.2"
+        "mezzio/mezzio-laminasviewrenderer": "^2.2",
+        "broadway/broadway": "^2.4",
+        "doctrine/mongodb-odm": "^2.2",
+        "beberlei/assert": "^3.3",
+        "helderjs/doctrine-mongo-odm": "^1.1",
+        "friendsofphp/proxy-manager-lts": "^1.0",
+        "monolog/monolog": "^2.2",
+        "laminas/laminas-zendframework-bridge": "^1.0",
+        "mezzio/mezzio-authorization-rbac": "^1.1",
+        "ocramius/proxy-manager": "^2.11",
+        "oras/monolog-middleware": "^4.0",
+        "mezzio/mezzio-cors": "^1.0",
+        "mezzio/mezzio-problem-details": "^1.3",
+        "mezzio/mezzio-swoole": "^4.2"
+
     },
     "require-dev": {
         "laminas/laminas-development-mode": "^3.3.0",
         "mezzio/mezzio-tooling": "^2.1",
         "phpunit/phpunit": "^9.5.11",
         "roave/security-advisories": "dev-master",
-        "filp/whoops": "^2.7.1"
+        "filp/whoops": "^2.7.1",
+        "swoole/ide-helper": "@dev"
     },
     "autoload": {
         "psr-4": {

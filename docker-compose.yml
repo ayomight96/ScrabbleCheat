@@ -1,0 +1,33 @@
+version: "3"
+services:
+    php-swoole:
+        build: ./dev
+        container_name: scrabbleCheatAPI
+        restart: always
+        ports:
+            - 8000:80
+        environment:
+            # AUTORELOAD_PROGRAMS: "dev"
+            # AUTORELOAD_ANY_FILES: 0
+            PHP_IDE_CONFIG: "serverName=mezzio-swoole"
+        volumes:
+            - .:/var/www
+        links:
+            - mongodb
+        logging:
+            options:
+                max-size: "10m"
+                max-file: "3"
+        command: ["php -e public/index.php"]
+        # command: ["./vendor/bin/mezzio-swoole", "start"]
+    mongodb:
+        image: mongo:4.4.5
+        restart: always
+        container_name: scrabbleCheatDB
+        ports:
+            - 27017:27017
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: ayomide_adekoya
+            MONGO_INITDB_ROOT_PASSWORD: Password2022
+        volumes:
+            - ../db/scrabbleCheat-api:/data/db

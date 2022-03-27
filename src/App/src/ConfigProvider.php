@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Client\WordsApiClientFactoryFactory;
+use App\Service\WordsApiService;
+use App\Service\WordsApiServiceFactory;
+
 /**
  * The configuration provider for the App module
  *
@@ -36,6 +40,8 @@ class ConfigProvider
             ],
             'factories'  => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+                WordsApiService::class => WordsApiServiceFactory::class,
+                WordsApiClientFactoryFactory::class => WordsApiClientFactoryFactory::class
             ],
         ];
     }

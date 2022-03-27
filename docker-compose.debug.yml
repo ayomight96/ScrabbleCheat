@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  scrabblecheat:
+    image: scrabblecheat
+    build:
+      context: .
+      dockerfile: ./Dockerfile
