@@ -2,6 +2,19 @@
 
 declare(strict_types=1);
 
+use Doctrine\Common\EventManager;
+use Doctrine\ODM\MongoDB\Configuration;
+use Doctrine\Persistence\Mapping\Driver\MappingDriver;
+use Doctrine\Persistence\ObjectManager;
+use Helderjs\Component\DoctrineMongoODM\AnnotationDriverFactory;
+use Helderjs\Component\DoctrineMongoODM\ConfigurationFactory;
+use Helderjs\Component\DoctrineMongoODM\ConnectionFactory;
+use Helderjs\Component\DoctrineMongoODM\DocumentManagerFactory;
+use Helderjs\Component\DoctrineMongoODM\EventManagerFactory;
+use MonologMiddleware\Factory\MonologMiddlewareFactory;
+use MonologMiddleware\MonologMiddleware;
+use MongoDB\Client;
+
 return [
     // Provides application-wide services.
     // We recommend using fully-qualified class names whenever possible as
@@ -20,6 +33,12 @@ return [
         ],
         // Use 'factories' for services provided by callbacks/factory classes.
         'factories' => [
+            ObjectManager::class => DocumentManagerFactory::class,
+            Configuration::class => ConfigurationFactory::class,
+            Client::class => ConnectionFactory::class,
+            EventManager::class => EventManagerFactory::class,
+            MappingDriver::class => AnnotationDriverFactory::class,
+            MonologMiddleware::class => MonologMiddlewareFactory::class
             // Fully\Qualified\ClassName::class => Fully\Qualified\FactoryName::class,
         ],
     ],
