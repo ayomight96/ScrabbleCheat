@@ -14,6 +14,7 @@ return [
     'dependencies' => [
         'factories' => [
             App\Middleware\GetWord::class => App\Middleware\GetWordFactory::class,
+            App\Middleware\Ok::class => App\Middleware\OkFactory::class,
         ],
     ],
 ];

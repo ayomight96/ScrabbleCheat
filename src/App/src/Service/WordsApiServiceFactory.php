@@ -12,8 +12,8 @@ class WordsApiServiceFactory
 {
     public function __invoke(ContainerInterface $container): WordsApiService
     {
-        return new WordsApiService(
-            $container->get(WordsApiClientFactoryFactory::class)
-        );
+        $config = $container->get('config')['wordsApi'];
+        $clientFactory = $container->get(WordsApiClientFactoryFactory::class);
+        return new WordsApiService($clientFactory, $config);
     }
 }
