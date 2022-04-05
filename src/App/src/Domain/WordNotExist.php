@@ -49,7 +49,6 @@ class WordNotExist extends EventSourcedAggregateRoot
     public function data(): array
     {
         return [
-            'WordNotExistId' => $this->id,
             'word' => $this->word
         ];
     }

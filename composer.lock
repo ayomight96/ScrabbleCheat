@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c112f1667ae3778143e34fffb0f94c5f",
+    "content-hash": "4cabf096929976666422c64f83d9619f",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -72,6 +72,94 @@
                 "source": "https://github.com/beberlei/assert/tree/v3.3.2"
             },
             "time": "2021-12-16T21:41:27+00:00"
+        },
+        {
+            "name": "bentools/cartesian-product",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bpolaszek/cartesian-product.git",
+                "reference": "ae6b437c3fc8243c6a5ab67fe270e032f4ce2f7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bpolaszek/cartesian-product/zipball/ae6b437c3fc8243c6a5ab67fe270e032f4ce2f7b",
+                "reference": "ae6b437c3fc8243c6a5ab67fe270e032f4ce2f7b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "dms/phpunit-arraysubset-asserts": "^0.3.1",
+                "php-coveralls/php-coveralls": "@stable",
+                "phpunit/phpunit": "^8.0|^9.0",
+                "squizlabs/php_codesniffer": "@stable",
+                "symfony/var-dumper": "^3.2|^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/function.php"
+                ],
+                "psr-4": {
+                    "BenTools\\CartesianProduct\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A simple, low-memory footprint function to generate all combinations from a multi-dimensionnal array.",
+            "support": {
+                "issues": "https://github.com/bpolaszek/cartesian-product/issues",
+                "source": "https://github.com/bpolaszek/cartesian-product/tree/1.4.1"
+            },
+            "time": "2022-01-19T13:31:38+00:00"
+        },
+        {
+            "name": "bentools/string-combinations",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bpolaszek/string-combinations.git",
+                "reference": "a8bc7e9ef581ddbe27d55a6868e9d73ba8dfec92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bpolaszek/string-combinations/zipball/a8bc7e9ef581ddbe27d55a6868e9d73ba8dfec92",
+                "reference": "a8bc7e9ef581ddbe27d55a6868e9d73ba8dfec92",
+                "shasum": ""
+            },
+            "require": {
+                "bentools/cartesian-product": "^1.1",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable",
+                "satooshi/php-coveralls": "@stable",
+                "squizlabs/php_codesniffer": "@stable",
+                "symfony/var-dumper": "^3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "BenTools\\StringCombinations\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A simple, low-memory footprint function to generate all string combinations from a series of characters.",
+            "support": {
+                "issues": "https://github.com/bpolaszek/string-combinations/issues",
+                "source": "https://github.com/bpolaszek/string-combinations/tree/master"
+            },
+            "time": "2018-03-26T14:28:40+00:00"
         },
         {
             "name": "brick/math",
