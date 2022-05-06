@@ -13,8 +13,15 @@ declare(strict_types=1);
 return [
     'dependencies' => [
         'factories' => [
-            App\Middleware\GetWord::class => App\Middleware\GetWordFactory::class,
+            App\Middleware\CheckUnresolvedWords::class => App\Middleware\CheckUnresolvedWordsFactory::class,
+            App\Middleware\CheckWordsInWordExist::class => App\Middleware\CheckWordsInWordExistFactory::class,
+            App\Middleware\CheckWordsInWordNotExist::class => App\Middleware\CheckWordsInWordNotExistFactory::class,
+            App\Middleware\CheckWordsViaApi::class => App\Middleware\CheckWordsViaApiFactory::class,
+            App\Middleware\GenerateWords::class => App\Middleware\GenerateWordsFactory::class,
+            App\Middleware\DocumentManagerMiddleware::class => App\Middleware\DocumentManagerMiddlewareFactory::class,
             App\Middleware\Ok::class => App\Middleware\OkFactory::class,
+            App\Middleware\RemoveResolvedWords::class => App\Middleware\RemoveResolvedWordsFactory::class,
+            App\play\PlayTest::class => App\play\PlayTestFactory::class,
         ],
     ],
 ];

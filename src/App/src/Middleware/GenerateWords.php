@@ -16,6 +16,7 @@ class GenerateWords implements MiddlewareInterface
 {
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
+        $post = $request->getParsedBody();
         $letters = $request->getAttribute('letters');
         try {
             Assertion::string(strtolower($letters), 'You must Enter a string of letters');

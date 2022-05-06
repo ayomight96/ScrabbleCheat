@@ -41,5 +41,13 @@ return [
             MonologMiddleware::class => MonologMiddlewareFactory::class
             // Fully\Qualified\ClassName::class => Fully\Qualified\FactoryName::class,
         ],
+        'delegators' => [
+            // \Swoole\Http\Server::class => [
+            //     \App\Delegator\TaskWorkerDelegator::class
+            // ],
+            ObjectManager::class => [//used because of swoole
+                \App\Delegator\DocumentManagerDelegator::class
+            ]
+        ]
     ],
 ];
